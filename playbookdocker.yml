@@ -1,4 +1,4 @@
--- Configure docker on host machines
+--- # Configure docker on host machines
 - hosts: all
   become: true
   become_user: ansible
@@ -9,4 +9,4 @@
         - docker
         - tree
     - name: Start docker service
-      service: name=docker state=started 
+      service: name=docker state=started
