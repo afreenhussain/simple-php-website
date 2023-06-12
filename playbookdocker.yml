@@ -1,7 +1,7 @@
---- # conditions yaml
-- hosts: all
-  become: true
-  become_user: root
+--- # install packages
+- hosts: webservers
+  user: ansible
+  become: yes
   tasks:
-    - name: install httpd on redhat
-      command: yum install httpd -y
+    - name: Install tree
+      package: name=tree state=present
