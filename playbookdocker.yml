@@ -2,6 +2,7 @@
 - hosts: all
   become: true
   become_user: ansible
+  connection: ssh
   tasks:
     - name: Install packages on hosts
       package: name={{item}} state=present
