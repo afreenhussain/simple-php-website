@@ -1,5 +1,5 @@
 -- Configure docker on host machines
-- hosts: webservers
+- hosts: all
   become: true
   become_user: ansible
   tasks:
