@@ -1,5 +1,5 @@
 --- # conditions yaml
-- hosts: demo
+- hosts: all
   user: ansible
   become: yes
   connection: ssh
