@@ -3,5 +3,8 @@
   user: ansible
   become: yes
   tasks:
-    - name: Install tree
-      package: name=tree state=present
+    - name: Install packages
+      package: name={{item}} state=present
+      loop:
+        - docker
+        - tree
