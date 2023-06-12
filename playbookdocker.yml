@@ -1,8 +1,7 @@
 --- # conditions yaml
 - hosts: all
   user: ansible
-  become: yes
-  connection: ssh
+  become: yes  
   tasks:
     - name: install httpd on redhat
       command: yum install httpd -y
