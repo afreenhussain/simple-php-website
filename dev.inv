@@ -1,0 +1,2 @@
+[nodeserver]
+172.31.47.50 ansible_user=ansible
