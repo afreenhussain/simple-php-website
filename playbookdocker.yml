@@ -8,3 +8,5 @@
       loop:
         - docker
         - tree
+    - name: Restart services
+      service: name=docker state=started      
