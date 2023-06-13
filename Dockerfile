@@ -9,4 +9,4 @@ ADD src /var/www/html/
 ENV mycustomvar = "This is test conn"
 
 EXPOSE 80
-CMD ["/usr/sbin/apache2", "-D",  "FOREGROUND"]
+#CMD ["/usr/sbin/apache2", "-D",  "FOREGROUND"]
