@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stages {        
+        stage('Clone git repository') {
+            steps {
+                git branch: 'master', url: 'https://github.com/afreenhussain/simple-php-website.git'
+            }
+        }
+        stage('Execute the playbook') {
+            steps {
+                ansiblePlaybook credentialsId: 'ansible_privatekey', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'dev.inv', playbook: 'playbookdocker.yml'
+            }
+        }
+    }
+}
