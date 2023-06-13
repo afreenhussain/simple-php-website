@@ -5,7 +5,7 @@ pipeline {
     stages {
 		stage('Create Docker Image') {
 			steps {
-				docker.build("docker_image:${env.BUILD_NUMBER}","-f Dockerfile")
+				sh "docker build -t docker_image:${env.BUILD_NUMBER} "
 			}
 		}		
 		stage ('Run Application') {
