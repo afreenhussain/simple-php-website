@@ -1,4 +1,7 @@
 node {  
+  stage('Checkout Source Code') {
+    checkout scm
+  }
   stage('Create Docker Image') {
     docker.build("docker_imageaf:${env.BUILD_NUMBER}")
   }
