@@ -1,2 +1,2 @@
 FROM nginx:latest
-COPY website /var/www/html/
+COPY . /var/www/html/
