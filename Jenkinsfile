@@ -1,9 +1,9 @@
 pipeline {
-    agent any
+	agent { dockerfile true}
     stages {
 		stage('Create Docker Image') {
 			steps {
-				docker.build("docker_af_image:${env.BUILD_NUMBER}")
+				sh 'docker build -t docker_af_image:${env.BUILD_NUMBER} . '
 			}
 		}		
 		stage ('Run Application') {
