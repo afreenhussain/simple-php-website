@@ -6,7 +6,7 @@
     - name: Install packages
       package: name={{item}} state=present
       loop:
-        - nano
+        - docker
         - tree
     - name: Restart services
       service: name=docker state=started      
